@@ -29,7 +29,7 @@ function Chat({ location }) {
     }, [ENDPOINT, location.search])
 
     useEffect(() => {
-        socket.on('sendMessage', (message) => {
+        socket.on('message', (message) => {
             setMessages([...messages, message]);
         })
     }, [messages])
